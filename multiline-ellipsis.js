@@ -23,9 +23,14 @@
 		
 		function makeEllipsis($el) {
 			var eDom = $el.get(0);
-			var t = $el.data('initialText');
+			var t = $el.attr('data-initial-text');
 			// Add back the original text and recalculate on resize.
-			$el.text(t);
+			// Return if value of original text is undefined.
+			if (typeof t !== 'undefined') {
+				$el.text(t);
+			} else {
+				return;
+			}
 			// Return early if the text fits the container.
 			if (eDom.scrollHeight - eDom.offsetHeight <= 0) {
 				return;
@@ -41,7 +46,7 @@
 		this.each(function () {
 			var elem = $(this);
 			// Store the intial text.
-			elem.data('initialText', elem.text());
+			elem.attr('data-initial-text', elem.text());
 			// Add ellipsis for overflow
 			makeEllipsis(elem);
 			// Recalculate after resizing the window.
