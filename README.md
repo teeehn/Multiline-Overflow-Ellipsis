@@ -3,7 +3,7 @@ jQuery Plugin. Adds overflow ellipsis to multi-line content.
 
 ## Usage:
 ```
-  $([selector]).ellipsis()
+  $(selector).ellipsis()
 ```
 
 ## Note
