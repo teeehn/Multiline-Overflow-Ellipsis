@@ -1,8 +1,8 @@
 /**
  *  Name: Multi-line Ellipsis
  *  Author: Thomas Nicolosi
- *  Version: 1.0.0
- *  Description: jQuery Plugin. Adds overflow ellipsis to multi-line content.
+ *  Version: 2.0.0
+ *  Description: Adds overflow ellipsis to multi-line content.
  *
  *  Usage:
  *    $([selector]).ellipsis()
